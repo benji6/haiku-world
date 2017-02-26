@@ -1,0 +1,10 @@
+.Navigation {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.Navigation__Link {
+  color: white;
+  margin-right: 1rem;
+}

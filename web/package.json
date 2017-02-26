@@ -1,0 +1,27 @@
+{
+  "name": "web",
+  "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "react-router-dom": "^4.0.0-beta.6",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "css-loader": "^0.26.2",
+    "eslint": "^3.16.1",
+    "eslint-config-benji6": "^1.2.0",
+    "extract-text-webpack-plugin": "^2.0.0",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben Hall"
+}
