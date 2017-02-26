@@ -1,6 +1,7 @@
 .Header {
   background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
   box-shadow: #777 0 0.5rem 1.25rem;
+  height: var(--header-height);
 }
 
 .Header__Title {
