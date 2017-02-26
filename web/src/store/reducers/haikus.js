@@ -1,11 +1,10 @@
-const initialState = [
-  {body: 'this is not a haiku... yet', id: 0},
-  {body: 'neither is this', id: 1},
-  {body: '...yet', id: 2},
-]
+import {HAIKUS_SET} from '../actions'
+
+const initialState = []
 
 export default (state = initialState, {payload, type}) => {
   switch (type) {
+    case HAIKUS_SET: return payload
     default: return state
   }
 }
