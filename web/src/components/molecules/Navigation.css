@@ -7,4 +7,9 @@
 .Navigation__Link {
   color: white;
   margin-right: 1rem;
+  text-decoration: none;
+}
+
+.Navigation__Link--active {
+  text-decoration: underline;
 }

@@ -1,9 +1,9 @@
 import {createElement} from 'react'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 const Navigation = () => createElement('nav', {className: 'Navigation'},
-  createElement(Link, {className: 'Navigation__Link', to: '/'}, 'Home'),
-  createElement(Link, {className: 'Navigation__Link', to: '/compose'}, 'Compose')
+  createElement(NavLink, {activeClassName: 'Navigation__Link--active', className: 'Navigation__Link', exact: true, to: '/'}, 'Home'),
+  createElement(NavLink, {activeClassName: 'Navigation__Link--active', className: 'Navigation__Link', exact: true, to: '/compose'}, 'Compose')
 )
 
 Navigation.propTypes = {}
