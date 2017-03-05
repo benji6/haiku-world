@@ -1,5 +1,6 @@
 import {
   HAIKUS_FETCH,
+  HAIKUS_POST,
   haikusSet,
 } from '../actions'
 
@@ -25,6 +26,8 @@ export default store => next => action => {
       ])))
       next(action)
       return
+    case HAIKUS_POST:
+      console.log('posting: ', action.payload)
     default: next(action)
   }
 }

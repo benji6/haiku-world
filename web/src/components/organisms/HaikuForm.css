@@ -1,0 +1,18 @@
+.HaikuForm {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.HaikuForm__Input {
+	resize: none;
+	height: 3rem;
+	width: 30rem;
+	max-width: 100vw;
+}
+
+.HaikuForm__Label {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+}
