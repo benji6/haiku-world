@@ -1,0 +1,21 @@
+{
+  "name": "api",
+  "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "eslint ."
+  },
+  "author": "Ben Hall",
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-benji6": "^1.2.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.1",
+    "express": "^4.15.2"
+  }
+}

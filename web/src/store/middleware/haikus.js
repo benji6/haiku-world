@@ -3,28 +3,19 @@ import {
   HAIKUS_POST,
   haikusSet,
 } from '../actions'
+import {apiUri} from '../../config'
 
 export default store => next => action => {
   switch (action.type) {
     case HAIKUS_FETCH:
-      window.setTimeout(() => store.dispatch(haikusSet([
-        {body: 'this is not a haiku', id: 0},
-        {body: 'neither is this', id: 1},
-        {body: '...yet', id: 2},
-        {body: 'this is not a haiku', id: 0},
-        {body: 'neither is this', id: 1},
-        {body: '...yet', id: 2},
-        {body: 'this is not a haiku', id: 0},
-        {body: 'neither is this', id: 1},
-        {body: '...yet', id: 2},
-        {body: 'this is not a haiku', id: 0},
-        {body: 'neither is this', id: 1},
-        {body: '...yet', id: 2},
-        {body: 'this is not a haiku', id: 0},
-        {body: 'neither is this', id: 1},
-        {body: '...yet', id: 2},
-      ])))
       next(action)
+      fetch(`${apiUri}/haikus`)
+        .then(res => {
+          if (res.status >= 200 && res.status < 300) return res.json()
+          else throw new Error('bad status code on /haikus GET', res.status)
+        })
+        .then(data => store.dispatch(haikusSet(data)))
+        .catch(console.error) // eslint-disable-line no-console
       return
     case HAIKUS_POST:
       console.log('posting: ', action.payload)
