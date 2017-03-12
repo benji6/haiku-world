@@ -4,6 +4,10 @@
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "test": "eslint ."
+  },
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
@@ -19,10 +23,6 @@
     "extract-text-webpack-plugin": "^2.0.0",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
-  },
-  "scripts": {
-    "start": "webpack-dev-server --open",
-    "test": "eslint ."
   },
   "author": "Ben Hall"
 }
